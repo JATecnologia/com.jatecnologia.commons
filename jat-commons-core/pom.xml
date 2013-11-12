@@ -3,7 +3,7 @@
   	<parent>
 		<groupId>com.jatecnologia.commons</groupId>    
 		<artifactId>jat-commons</artifactId>
-    		<version>1.0.0-SNAPSHOT</version>
+    		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>    
 	</parent>	
 	<artifactId>jat-commons-core</artifactId>
