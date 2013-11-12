@@ -6,15 +6,15 @@ import java.security.NoSuchAlgorithmException;
 
 public class EncryptionUtil {
 	
-	public static String builPasswordSHA256(String password) {		 
+	public static String generatePasswordSHA256(String password) {		 
 		try {
-			MessageDigest algoritmo = MessageDigest.getInstance("SHA-256");
+			MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
 						
-			algoritmo.update(password.getBytes());                  
+			algorithm.update(password.getBytes());                  
            
-			String senhaEncriptada = new BigInteger(1, algoritmo.digest()).toString(16);
+			String encryptedPassword = new BigInteger(1, algorithm.digest()).toString(16);
             
-			return senhaEncriptada;
+			return encryptedPassword;
 			
 		} catch (NoSuchAlgorithmException e) {			
 			e.printStackTrace();
