@@ -6,9 +6,13 @@ import java.security.NoSuchAlgorithmException;
 
 public class EncryptionUtil {
 	
+	public static final String MD5 = "MD5";
+	public static final String SHA1 = "SHA-1";
+	public static final String SHA256 = "SHA-256";
+	
 	public static String generatePasswordSHA256(String password) {		 
 		try {
-			MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
+			MessageDigest algorithm = MessageDigest.getInstance(SHA256);
 						
 			algorithm.update(password.getBytes());                  
            
